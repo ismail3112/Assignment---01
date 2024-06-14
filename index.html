@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="w-8/12 m-auto">
+    <!-- --------------------------------------------------------------------------->
+    <!-- navigation section start -->
+    <div class="nav-bar-section flex flex-wrap justify-between items-center py-8 px-6">
+        <div class="nav-left-section flex items-center gap-4 lg:gap-8">
+            <div class="logo flex items-center gap-2 lg:gap-4">
+                <img src="./Image/logo (1).png" alt="" class="">
+                <img src="./Image/Airfolio.png" alt="" class="object-none">
+            </div>
+            <div class="hidden sm:flex items-center gap-4 lg:gap-8">
+                <a class="text-base font-normal" href="#">About Us</a>
+                <a class="text-base font-normal" href="#">Services</a>
+                <a class="text-base font-normal" href="#">Portfolio</a>
+                <a class="text-base font-normal" href="#">Pages</a>
+                <a class="text-base font-normal" href="#">Cart(0)</a>
+            </div>
+        </div>
+        <button class="btn-1 bg-[#078D84] rounded-lg px-4 py-2 md:px-6 md:py-4 text-white">Hire Me</button>
+        <div class="sm:hidden flex items-center">
+            <button id="menu-button" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 block sm:hidden">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        
+        </div>
+        <div id="mobile-menu" class="hidden w-full sm:hidden">
+            <a class="block text-base font-normal py-2" href="#">About Us</a>
+            <a class="block text-base font-normal py-2" href="#">Services</a>
+            <a class="block text-base font-normal py-2" href="#">Portfolio</a>
+            <a class="block text-base font-normal py-2" href="#">Pages</a>
+            <a class="block text-base font-normal py-2" href="#">Cart(0)</a>
+        </div>
+    </div>
+
+    <script>
+        // Toggle mobile menu
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+    <!-- navigation section end -->
+    <!-- --------------------------------------------------------------------------->
+    <!-- banner section start -->
+
+    <div class="banner-section-container flex flex-wrap items-center lg:justify-between justify-center bg-[#F6F8FF] px-6 pt-10">
+                <div class="banner-section-left lg:w-1/2">
+                    <p class="banner-content-p1 text-base font-normal">Hi there,My name is Jane Cooper</p>
+                    <h1 class="banner-content-h1 lg:text-6xl md:text-5xl text-3xl font-semibold">Showcase Your Work <br> with Airfolio's <br> Creative Solutions</h1>
+                    <p class="banner-content-p2 text-lg font-normal ">Create stunning portfolios and websites with Airfolio's UI/UX design <br> and Webflow development services.</p>
+                    <button class="btn-1 bg-[#078D84] rounded-lg px-4 py-2 md:px-6 md:py-4 my-8 text-white">Hire Me</button>
+                    <button class="btn-1 bg-[#FFF] rounded-lg px-4 py-2 md:px-6 md:py-4 text-[#078D84] border border-[#078D84]">Hire Me</button>
+                </div>
+                <div class="banner-section-right lg:w-1/2 md:w-full w-full lg:flex lg:justify-center">
+                    <img src="./Image/man.png">
+                </div>
+            </div>
+</body>
+
+</html>
