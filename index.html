@@ -5,13 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment - 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .banner-section-right {
+            background-image: url(./Image/bg.png);
+            width: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
+
 <body class="w-8/12 m-auto">
-    <!-- --------------------------------------------------------------------------->
-    <!-- navigation section start -->
-    <div class="nav-bar-section flex flex-wrap justify-between items-center py-8 px-6">
+    <!-- ------------------------------------ navigation section start--------------------------------------->
+    <div class="nav-bar-section flex flex-wrap justify-between items-center py-4 px-6">
         <div class="nav-left-section flex items-center gap-4 lg:gap-8">
             <div class="logo flex items-center gap-2 lg:gap-4">
                 <img src="./Image/logo (1).png" alt="" class="">
@@ -25,50 +46,300 @@
                 <a class="text-base font-normal" href="#">Cart(0)</a>
             </div>
         </div>
-        <button class="btn-1 bg-[#078D84] rounded-lg px-4 py-2 md:px-6 md:py-4 text-white">Hire Me</button>
+        <button class="btn-1 bg-[#078D84] rounded-lg px-4 py-2 md:px-6 md:py-4 text-white md:mt-6">Hire Me</button>
         <div class="sm:hidden flex items-center">
-            <button id="menu-button" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 block sm:hidden">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            <button id="menu-button"
+                class="text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 block sm:hidden">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
                 </svg>
             </button>
         </div>
-        
+
+    </div>
+    <div id="mobile-menu" class="hidden w-full sm:hidden">
+        <a class="block text-base font-normal py-2" href="#">About Us</a>
+        <a class="block text-base font-normal py-2" href="#">Services</a>
+        <a class="block text-base font-normal py-2" href="#">Portfolio</a>
+        <a class="block text-base font-normal py-2" href="#">Pages</a>
+        <a class="block text-base font-normal py-2" href="#">Cart(0)</a>
+    </div>
+    </div>
+    <!-- ------------------------------------ navigation section end--------------------------------------->
+
+    <!-- ------------------------------------ banner section start--------------------------------------->
+    <div
+        class="banner-section-container flex flex-wrap  items-center lg:justify-between justify-center bg-[#F6F8FF] px-6 pt-10">
+        <div class="banner-section-left lg:w-1/2">
+            <p class="banner-content-p1 text-base font-normal">Hi there,My name is Jane Cooper</p>
+            <h1 class="banner-content-h1 lg:text-6xl md:text-5xl text-3xl font-semibold">Showcase Your Work <br> with
+                Airfolio's <br> Creative Solutions</h1>
+            <p class="banner-content-p2 text-lg font-normal ">Create stunning portfolios and websites with Airfolio's
+                UI/UX design <br> and Webflow development services.</p>
+            <button class="btn-1 bg-[#078D84] rounded-lg px-4 py-2 md:px-6 md:py-4 my-8 text-white">Hire Me</button>
+            <button
+                class="btn-1 bg-[#FFF] rounded-lg px-4 py-2 md:px-6 md:py-4 text-[#078D84] border border-[#078D84]">Portfolio</button>
+
         </div>
-        <div id="mobile-menu" class="hidden w-full sm:hidden">
-            <a class="block text-base font-normal py-2" href="#">About Us</a>
-            <a class="block text-base font-normal py-2" href="#">Services</a>
-            <a class="block text-base font-normal py-2" href="#">Portfolio</a>
-            <a class="block text-base font-normal py-2" href="#">Pages</a>
-            <a class="block text-base font-normal py-2" href="#">Cart(0)</a>
+        <div class="banner-section-right lg:w-1/2 md:w-full w-full lg:flex lg:justify-center">
+            <img src="./Image/man.png">
         </div>
     </div>
 
-    <script>
-        // Toggle mobile menu
-        document.getElementById('menu-button').addEventListener('click', function() {
-            var menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-    </script>
-</body>
+    <div class="company bg-[#3E3E70] lg:h-48  flex flex-wrap items-center lg:justify-between justify-center pt-8 px-8">
+        <p class="flex justify-center text-white text-base font-normal ">Trusted by top companies <br> worldwide</p>
+        <div class="flex flex-wrap items-center justify-center">
+            <img src="./Image/brand-1.png" alt="" class="h-14 mr-6">
+            <img src="./Image/brand-2.png" alt="" class="h-14 mr-6">
+            <img src="./Image/brand-3.png" alt="" class="h-8 mr-6">
+            <img src="./Image/brand-4.png" alt="" class="h-14 mr-6">
+            <img src="./Image/brand-5.png" alt="" class="h-14 mr-6">
+        </div>
+    </div>
+    <!-- ------------------------------------ banner section end--------------------------------------->
 
-    <!-- navigation section end -->
-    <!-- --------------------------------------------------------------------------->
-    <!-- banner section start -->
 
-    <div class="banner-section-container flex flex-wrap items-center lg:justify-between justify-center bg-[#F6F8FF] px-6 pt-10">
-                <div class="banner-section-left lg:w-1/2">
-                    <p class="banner-content-p1 text-base font-normal">Hi there,My name is Jane Cooper</p>
-                    <h1 class="banner-content-h1 lg:text-6xl md:text-5xl text-3xl font-semibold">Showcase Your Work <br> with Airfolio's <br> Creative Solutions</h1>
-                    <p class="banner-content-p2 text-lg font-normal ">Create stunning portfolios and websites with Airfolio's UI/UX design <br> and Webflow development services.</p>
-                    <button class="btn-1 bg-[#078D84] rounded-lg px-4 py-2 md:px-6 md:py-4 my-8 text-white">Hire Me</button>
-                    <button class="btn-1 bg-[#FFF] rounded-lg px-4 py-2 md:px-6 md:py-4 text-[#078D84] border border-[#078D84]">Hire Me</button>
+    <!-- ------------------------------------ service section start--------------------------------------->
+    <div class="service-section-container bg-[#F6F8FF] py-12 px-8 flex flex-wrap lg:justify-between">
+        <div class="service-left">
+            <p class="text-base font-normal">Our Services</p>
+            <h2 class="lg:text-5xl md:text-5xl text-4xl font-medium text-[#1C1C57] mb-4">Take a look at the variety of
+                <br> services I offer.
+            </h2>
+        </div>
+        <div class="service-left text-base font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse <br> varius enim in eros elementum tristique. Duis cursus, mi quis viverra <br> ornare, eros
+            dolor interdum nulla, ut commodo diam libero </div>
+    </div>
+
+    <div class="bg-[#F6F8FF]">
+        <div class="service-item-section flex flex-wrap  gap-8 justify-center bg-[#F6F8FF] pb-12">
+            <div class="box-1 border  bg-white shadow-md px-6 py-10 rounded-lg">
+                <div class="shadow-md shadow-gray-200 w-[40%] flex justify-center py-2 rounded-lg"><img
+                        src="./Image/Group (5).png" alt=""></div>
+                <h2 class="text-2xl font-medium text-[#000000] pt-2">UIUX Design</h2>
+                <p class="text-base font-normal text-[#000000] pt-2">Lorem ipsum dolor sit amet, <br> consectetur
+                    adipiscing elit.<br> Suspendisse varius enim in eros <br> elementum tristique.</p>
+            </div>
+            <div class="box-1 border  bg-white shadow-md px-6 py-10 rounded-lg">
+                <div class="shadow-md shadow-gray-200 w-[40%] flex justify-center py-2 rounded-lg"><img
+                        src="./Image/Group (2).png" alt=""></div>
+                <h2 class="text-2xl font-medium text-[#000000] pt-2">Webflow devlopment </h2>
+                <p class="text-base font-normal text-[#000000] pt-2">Lorem ipsum dolor sit amet, <br> consectetur
+                    adipiscing elit.<br> Suspendisse varius enim in eros <br> elementum tristique.</p>
+            </div>
+            <div class="box-1 border  bg-white shadow-md px-6 py-10 rounded-lg">
+                <div class="shadow-md shadow-gray-200 w-[40%] flex justify-center py-2 rounded-lg"><img
+                        src="./Image/Group (3).png" alt=""></div>
+                <h2 class="text-2xl font-medium text-[#000000] pt-2">Marketing </h2>
+                <p class="text-base font-normal text-[#000000] pt-2">Lorem ipsum dolor sit amet, <br> consectetur
+                    adipiscing elit.<br> Suspendisse varius enim in eros <br> elementum tristique.</p>
+            </div>
+            <div class="box-1 border  bg-white shadow-md px-6 py-10 rounded-lg">
+                <div class="shadow-md shadow-gray-200 w-[40%] flex justify-center py-2 rounded-lg"><img
+                        src="./Image/Group (4).png" alt=""></div>
+                <h2 class="text-2xl font-medium text-[#000000] pt-2">Branding </h2>
+                <p class="text-base font-normal text-[#000000] pt-2">Lorem ipsum dolor sit amet, <br> consectetur
+                    adipiscing elit.<br> Suspendisse varius enim in eros <br> elementum tristique.</p>
+            </div>
+        </div>
+        <div class="flex justify-center gap-8">
+            <button class="btn-1 bg-[#078D84] rounded-lg px-4 py-2 md:px-6 md:py-4 my-8 text-white">Hire Me</button>
+
+            <button
+                class="btn-1 text-[#078D84] border border-[#078D84] rounded-lg px-4 py-2 md:px-6 md:py-4 my-8 ">Portfolio</button>
+        </div>
+    </div>
+    <!-------------------------------------- service section end--------------------------------------->
+
+
+    <!-------------------------------------- about section start--------------------------------------->
+    <div class="lg:flex  lg:justify-between items-center my-20 px-12">
+        <div class="lg:w-[50%] relative mt-0 ">
+            <img src="./Image/Placeholder Image.png" alt="" class="relative lg:h-[550px]">
+        </div>
+        <!-- <img src="./Image/Ellipse 106.png" alt="" class="">
+        <img src="./Image/Ellipse 105.png" alt="" class=""> -->
+
+        <div class="lg:w-[50%] lg:ml-4">
+            <p class="text-base font-normal">Our Services</p>
+            <h2 class="lg:text-4xl md:text-5xl text-4xl font-medium text-[#1C1C57] mb-4">Who is responsible for all of
+                this <br> impressive effort?
+            </h2>
+            <div class="service-left text-base font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse <br> varius enim in eros elementum tristique. Duis cursus, mi quis viverra <br> ornare, eros
+                dolor interdum nulla, ut commodo diam libero </div>
+            <div class="complete flex flex-wrap gap-6 mt-8 lg:ml-4">
+                <div class="Project completed border  bg-white shadow-md px-6 py-6 rounded-lg">
+                    <h1 class="text-4xl font-medium">100+</h1>
+                    <p class="text-base font-normal">Project completed</p>
                 </div>
-                <div class="banner-section-right lg:w-1/2 md:w-full w-full lg:flex lg:justify-center">
-                    <img src="./Image/man.png">
+
+                <div class="Project completed border  bg-white shadow-md px-6 py-6 rounded-lg">
+                    <h1 class="text-4xl font-medium">98%</h1>
+                    <p class="text-base font-normal">Client satisfied</p>
+                </div>
+
+                <div class="Project completed border  bg-white shadow-md px-6 py-6 rounded-lg">
+                    <h1 class="text-4xl font-medium">80%</h1>
+                    <p class="text-base font-normal">Design Project</p>
                 </div>
             </div>
+        </div>
+    </div>
+
+
+    <!-- <------------------------swiper slider start------------------------->
+    <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full bg-[#255BF9] flex justify-center py-24">
+            <div class="w-full border-4 content-center border-none px-8">
+                <div class="star flex justify-center items-center">
+                    <img src="./Image/star (1).png" alt="">
+                    <img src="./Image/star (1).png" alt="">
+                    <img src="./Image/star (1).png" alt="">
+                    <img src="./Image/star (1).png" alt="">
+                    <img src="./Image/star (1).png" alt="">
+                </div>
+                <p class="my-6 text-center text-base font-normal text-[#FFF]">
+                    Airfolio has been instrumental in showcasing my design portfolio. Their UIUX <br> design services
+                    are top-notch and their Webflow development has taken my <br> website to the next level.
+                </p>
+
+                <div class="jhone-profile flex flex-wrap justify-center items-center gap-6">
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <img src="./Image/jhon.png" alt="">
+                        <span>
+                            <p class="text-white text-base font-semibold">John Doe</p>
+                            <p class="text-white text-sm font-normal">Graphic Designer, ABC Company</p>
+                        </span>
+
+                    </div>
+                    <div class="">
+                        <img src="./Image/brand-1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" class="btn btn-circle">❮</a>
+                <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+        </div>
+    </div>
+    <!-- <------------------------swiper slider end------------------------->
+
+    <!-- <------------------------Footer section start------------------------->
+    <div class="bg-[#1C1C57] container h-[500px]">
+        <div class="centered">
+            <span>
+                <h1
+                    class="banner-content-h1 lg:text-[40px] md:text-[38px] text-[30px] font-semibold text-white text-center">
+                    Grow your business with
+                    AirWave</h1>
+                <p class="text-white lg:text-[18px] text-[12px] font-normal text-center">Discover the power of AirWave's
+                    marketing services and start
+                    earning today.</p>
+            </span>
+            <span class="lg:flex justify-center lg:gap-6">
+                <button
+                    class="btn-1 rounded-lg px-4 py-2 md:px-6 md:py-4 my-8 bg-white text-base font-semibold text-[#1C1C57]">Hire
+                    Me</button>
+                <button
+                    class="btn-1 rounded-lg px-4 py-2 md:px-6 md:py-4 my-8 text-white text-base font-semibold bg-[#1C1C57] border-2">Portfolio</button>
+            </span>
+        </div>
+    </div>
+    <div>
+        <div class="footer-container flex flex-wrap justify-between px-8  bg-[#1C1C57] text-white py-10">
+            <div class="footer-container-right border border-blue-700 w-[40%]">
+                <h1>Ami asbo. Kaw bosbena</h1>
+            </div>
+            <div class="fotter-container-left border border-red-700 w-[60%] flex flex-wrap gap-7 justify-between">
+                <div class="page-menu">
+                    <h3 class="text-base font-semibold mb-2">Pages</h3>
+                    <div class="">
+                        <a href="" class="text-[14px] font-normal">Home</a> <br>
+                        <a href="" class="text-[14px] font-normal">About</a> <br>
+                        <a href="" class="text-[14px] font-normal">Contact</a> <br>
+                        <a href="" class="text-[14px] font-normal">Portfolio</a> <br>
+                        <a href="" class="text-[14px] font-normal">Portfolio single</a>
+                    </div>
+                </div>
+                <div class="Shop-menu">
+                    <h3 class="text-base font-semibold mb-2">Shop</h3>
+                    <div class="">
+                        <a href="" class="text-[14px] font-normal">Product Single</a> <br>
+                        <a href="" class="text-[14px] font-normal">Blog</a> <br>
+                        <a href="" class="text-[14px] font-normal">Blog Post</a> <br>
+                    </div>
+                </div>
+                <div class="Utility Pages-menu">
+                    <h3 class="text-base font-semibold mb-2">Utility Pages</h3>
+                    <div class="">
+                        <a href="" class="text-[14px] font-normal">Styleguide</a> <br>
+                        <a href="" class="text-[14px] font-normal">Start Here</a> <br>
+                        <a href="" class="text-[14px] font-normal">404 Not Found</a> <br>
+                        <a href="" class="text-[14px] font-normal">Password Protected</a> <br>
+                        <a href="" class="text-[14px] font-normal">Licenses</a>
+                        <a href="" class="text-[14px] font-normal">Changelog</a>
+                    </div>
+                </div>
+                <div class="page-menu">
+                    <h3 class="text-base font-semibold mb-2">Pages</h3>
+                    <div class="">
+                        <div class="flex justify-start items-center">
+                            <img src="./Image/fb.png" alt="">
+                            <a href="" class="text-[14px] font-normal">Facebook</a> <br>
+                        </div>
+                        <div class="flex justify-start items-center">
+                            <img src="./Image/instr.png" alt="">
+                            <a href="" class="text-[14px] font-normal">Instagram</a> <br>
+                        </div>
+                        <div class="flex justify-start items-center">
+                            <img src="./Image/twitter.png" alt="">
+                            <a href="" class="text-[14px] font-normal">Twitter</a> <br>
+                        </div>
+                        <div class="flex justify-start items-center">
+                            <img src="./Image/in.png" alt="">
+                            <a href="" class="text-[14px] font-normal">LinkedIn</a> <br>
+                        </div>
+                        <div class="flex justify-start items-center">
+                            <img src="./Image/yt.png" alt="">
+                            <a href="" class="text-[14px] font-normal">Youtube</a> <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" bg-[#1C1C57] text-white pt-8 px-8 py-4">
+            <div class="border-t border-white flex justify-between py-4">
+                <div>
+                    <p>© 2023 Created by Airdokan & Powerd by Webflow. All rights reserved.</p>
+                </div>
+                <div class="flex gap-3">
+                    <a href="" class="text-[14px] font-normal">Privacy Policy</a>
+                    <a href="" class="text-[14px] font-normal">Terms of Service</a>
+                    <a href="" class="text-[14px] font-normal">Cookies Settings</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <script>
+            // Toggle mobile menu
+            document.getElementById('menu-button').addEventListener('click', function () {
+                var menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            });
+        </script>
 </body>
 
 </html>
